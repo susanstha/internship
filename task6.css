@@ -1,0 +1,9 @@
+div.one {
+    float: left;
+}
+div.two {
+    float: right;
+}
+div.clearing {
+    clear: both;
+}

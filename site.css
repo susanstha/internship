@@ -1,0 +1,70 @@
+body{
+  background-color: #011627;
+  color: #FDFFFC;
+  text-align: center;
+  border: 40px solid #2EC486;
+  border-top: 0px;
+  margin: 0px;
+}
+  pre.bi{
+    background-image : url("sochware.jpg");
+    background-repeat: no-repeat;
+    background-size: 1400px 100px;
+  }
+  hr{
+    color: blue;
+  }
+  h2{
+    color: #31c643;
+    font-family: Blackadder Itc;
+    text-align: center;
+  }
+  table{
+    color: #FDFFFC;
+    font-family: "Segoe Print";
+    font-size: 10pt;
+    align-items: center;
+  }
+  div{
+    color: black;
+    background: white;
+  }
+  a:visited{
+    color: red;
+  }
+  a:hover{
+    color: #c17145;
+  }
+  a:active{
+    color: rgb(0, 4, 255)(250, 234, 234);
+  }
+  p{
+    font-size: 10pt;
+    font-family: "Segoe Print";
+  }
+  h3{
+    color: #6842f4;
+    font-family: "Blackadder Itc";
+  }
+  ol.cl1{
+    font-family: "Segoe Print";
+    font-size: 10pt;
+  }
+  #b{
+  border: 30px solid white;
+  }
+  #c{
+    height: 225px;
+    width: 225px;
+    border: 5px solid white;
+  }
+  #sub{
+    background-color: #FF9F1C;
+    height: 40px;
+    width: 70px;
+    margin: 4px;
+    margin-top: 12px;
+  
+    border-radius: 25px;
+  }
+  

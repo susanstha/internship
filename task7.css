@@ -1,0 +1,112 @@
+.fimages {
+    height: 4cm;
+    width: 4cm;
+    float: left;
+    padding: 20px; 
+        }
+.ftxt {
+    background-color: blue;
+    height: 90px;
+        }
+.fname {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-size: 39px;
+        }
+.ftitle {
+    height: 15px;
+    padding-top: 25px;
+    margin-top: -45px;
+        }
+.ftit{
+    text-align: center;
+    color: white;
+    padding-top: -50px;
+    background-color: green;
+}
+
+.labout {
+    float: left;
+    width: 30%;
+    margin-top: 56px;
+    margin-left: -180px;
+}
+.rcareer{
+    float:right;
+    width: 50%;
+    text-align: center;
+    text-align: justify;
+    margin-top: 20px;
+}
+.lcontact{
+    float: left;
+    width: 30%;
+}
+.reducation{
+    float:right;
+    width: 50%;
+}
+.rdate{
+    float:left;
+    width:20%;
+}
+.reducontent{
+    float:right;
+    width:80%;
+}
+.lskills{
+    float: left;
+    width: 30%;
+}
+.rexperience{
+    float:right;
+    width: 50%;
+}
+.lskills li{
+    margin: 20px 0;
+}
+.bar{
+    background: #353b48;
+    display: block;
+    height: 2px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #2187e7b3;
+}
+.bar span{
+    height: 2px;
+    float: left;
+    background: #2187e7;
+}
+.ts {
+    width: 95%;
+}
+.ct {
+    width: 98%;
+}
+.wd {
+    width: 90%;
+}
+.dev {
+    width: 85%;
+}
+.al {
+    width: 92%;
+}
+.pl {
+    width: 75%;
+}
+.os {
+    width: 80%;
+}
+.cps {
+    width: 88%;
+}
+.l {
+    width: 85%;
+}
+.it {
+    width: 82%;
+}

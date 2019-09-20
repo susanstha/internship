@@ -1,0 +1,34 @@
+body{
+    background-color: #011627;
+    color: #FDFFFC;
+    text-align: center;
+    border-top: 0px;
+    margin: 0px;
+    
+  }
+
+h2.main{
+    text-shadow: 5px 5px 5px gold;
+}
+div.bor{
+    padding: 1pc;
+    border-style: solid;
+    border-color: black;
+    float: right;
+    background-image: linear-gradient(red, yellow);
+}
+#sub{
+    background-color: #FF9F1C;
+    height: 40px;
+    width: 70px;
+    margin: 4px;
+    margin-top: 12px;
+    border-radius: 25px;
+  }
+div.or{
+    float: left;
+    padding: 1pc;
+    border-style: solid;
+    border-color: black;
+    background-image: radial-gradient(red, yellow, green);
+    }
