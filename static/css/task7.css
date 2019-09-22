@@ -55,6 +55,10 @@
     float:right;
     width:80%;
 }
+.rinterest{
+    float:right;
+    width: 50%;
+}
 .lskills{
     float: left;
     width: 30%;
@@ -110,3 +114,8 @@
 .it {
     width: 82%;
 }
+.padd {
+    margin-top: -20px;
+
+}
+

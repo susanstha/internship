@@ -43,10 +43,13 @@
     <div style="width: 100%">
         <div class="lcontact">
             <h1>CONTACT</h1>
-            <i class="fas fa-map-marker-alt"></i> <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                     sed do eiusmod tempor incididunt ut labore et
-                    </p>
+            <i class="fas fa-map-marker-alt"></i> 44 Shirley Ave. West Chicago,IL 60185
+            <br>
+            <br>
+            <i class="fa fa-phone"></i> 123.456.7890
+            <br>
+            <br>
+            <i class="far fa-envelope"></i> johnbates@gmail.com
             
         </div>
         <div class="reducation">
@@ -56,16 +59,16 @@
             </div>
             <div class="reducontent">
                 <h4>MASTERAL DEGREE</h4>
-                <h6>INFORMATION TECHNOLOGY</h6> 
-                <p>university of chicago</p>
+                <h6 class="padd">INFORMATION TECHNOLOGY</h6> 
+                <p class="padd">University of Chicago</p>
             </div>
             <br>
             <br>
                 
             <div class="reducontent">
                 <h4>BACHELOR DEGREE</h4>
-                <h6>BSC COMPUTER ENGINEERING</h6> 
-                <p>university of chicago</p>
+                <h6 class="padd">BSC COMPUTER ENGINEERING</h6> 
+                <p class="padd">University of Chicago</p>
             </div>
             <div class="rdate">
                 <h2>2018 </h2>
@@ -74,8 +77,8 @@
             <br>
             <div class="reducontent">
                 <h4>DIPLOMA</h4>
-                <h6>COMPUTER ENGINEERING</h6> 
-                <p>university of chicago</p>
+                <h6 class="padd">COMPUTER ENGINEERING</h6> 
+                <p class="padd">University of Chicago</p>
             </div>
             <div class="rdate">
                 <h2>2014 </h2>
@@ -134,8 +137,8 @@
                     <h2>2022 </h2>
                 </div>
                 <div class="reducontent">
-                    <h6>Ample App Corp.-Web Developer</h6> 
-                    <p>
+                    <h4>Ample App Corp.-Web Developer</h4> 
+                    <p class="padd">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                          sed do eiusmod tempor incididunt ut labore et
                     </p>
@@ -144,8 +147,8 @@
                 <br>
                     
                 <div class="reducontent">
-                    <h6>Webteracts Apps - Web Developer</h6>
-                    <p>
+                    <h4>Webteracts Apps - Web Developer</h4>
+                    <p class="padd">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                          sed do eiusmod tempor incididunt ut labore et
                     </p>
@@ -156,8 +159,8 @@
                 <br>
                 <br>
                 <div class="reducontent">
-                    <h6>Seven Electronics - Intren</h6> 
-                    <p>
+                    <h4>Seven Electronics - Intren</h4> 
+                    <p class="padd">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                          sed do eiusmod tempor incididunt ut labore et
                     </p>
@@ -165,6 +168,16 @@
                 <div class="rdate">
                     <h2>2020 </h2>
                 </div>              
+            </div>
+            <div class="rinterest">
+                <h1>INTEREST</h1>
+                <div style="font-size: 40px">
+                    <i class="fab fa-d-and-d"></i>
+                    <i class="fas fa-horse-head"></i>
+                    <i class="fab fa-fort-awesome"></i>
+                    <i class="fas fa-bed"></i>
+                    <i class="fas fa-basketball-ball"></i>
+                </div>
             </div>
         </div>
 
