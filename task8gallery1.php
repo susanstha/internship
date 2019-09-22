@@ -39,27 +39,29 @@
         </div>
   </div>
   <div class="column">
-      <a href="task8gallery2.php">
-      <img src="static/images/op1.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op2.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op3.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op4.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op5.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op6.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
-      <a href="task8gallery2.php">
-      <img src="static/images/op7.jpg" alt="One Piece Character/s" style="width:100%" height="400">
-      </a>
+    <div class="gallery">
+        <a href="task8gallery2.php">
+        <img src="static/images/op1.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op2.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op3.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op4.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op5.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op6.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+        <a href="task8gallery2.php">
+        <img src="static/images/op7.jpg" alt="One Piece Character/s" style="width:100%" height="400">
+        </a>
+    </div>
     </div>  
     <div class="column">
         <div class="gallery">
