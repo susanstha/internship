@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="task8gallery.css">
+    <link rel="stylesheet" href="static/css/task8gallery.css">
     <title>Image Detail</title>
 </head>
 <body>
     <div class="responsives" >
         <div class="gallery">
-            <img src="cake1.jpg" alt="A Birthday Cake" style="width:100%">
+            <img src="static/images/cake1.jpg" alt="A Birthday Cake" style="width:100%">
             <br>
             <br>
 

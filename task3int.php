@@ -71,7 +71,7 @@
   </head>
   <body>
     <a name="top"></a>
-    <a href="#Home"><img src="logo.jpg" width="100" height="100" alt=""></a>
+    <a href="#Home"><img src="static/images/logo.jpg" width="100" height="100" alt=""></a>
     <a href="#Home">Home</a> &nbsp|&nbsp
     <a href="#About Us">About us</a> &nbsp | &nbsp
     <a href="#Service">Service</a> &nbsp | &nbsp
@@ -83,7 +83,7 @@
     <a name = "Home"><h2>Home</h2></a>
     <br>
     <br>
-    <img id="b" src="sochware.jpg" width="1200" height="400" alt="">
+    <img id="b" src="static/images/sochware.jpg" width="1200" height="400" alt="">
     <br>
     <pre>
     Yeah we love tech and we know so do you. 
@@ -117,11 +117,11 @@
     <a href="#top"><button id="sub" type="button" name="Top">Go To Top</button></a>
     <hr>
     <a name="Gallery"><h2>Gallery</h2></a>
-    <a href="#"><img id="c" src="1.jpg" alt=""></a>
-    <a href="#"><img id="c" src="2.jpg" alt=""></a>
-    <a href="#"><img id="c" src="3.jpg" alt=""></a>
-    <a href="#"><img id="c" src="4.jpg" alt=""></a>
-    <a href="#"><img id="c" src="5.jpg" alt=""></a>
+    <a href="#"><img id="c" src="static/images/1.jpg" alt=""></a>
+    <a href="#"><img id="c" src="static/images/2.jpg" alt=""></a>
+    <a href="#"><img id="c" src="static/images/3.jpg" alt=""></a>
+    <a href="#"><img id="c" src="static/images/4.jpg" alt=""></a>
+    <a href="#"><img id="c" src="static/images/5.jpg" alt=""></a>
     <br>
     <a href="#top"><button id="sub" type="button" name="Top">Go To Top</button></a>
     <hr>

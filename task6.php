@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="task6.css">
+    <link rel="stylesheet" href="static/css/task6.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
         <a href="#BecomeAMember">Become A Member</a>
         </div>
         <div class="two">
-            <img src="path.png" alt="" height="300" width="900">
+            <img src="static/images/path.png" alt="" height="300" width="900">
         </div>
     </div>
     
@@ -45,7 +45,7 @@
             </div>
             <div class="two">  
             <h3>Executive Members</h3>
-                <img src="subrat.png" alt="">
+                <img src="static/images/subrat.png" alt="">
             
                 <p>
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -72,19 +72,19 @@
     <hr>
     <div>
         <a name = "Blogs"></a><h2>BLOGS</h2>
-        <img src="comp1.png" alt="">
+        <img src="static/images/comp1.png" alt="">
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <img src="comp1.png" alt="">
+        <img src="static/images/comp1.png" alt="">
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <img src="comp1.png" alt="">
+        <img src="static/images/comp1.png" alt="">
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <img src="comp1.png" alt="">
+        <img src="static/images/comp1.png" alt="">
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -92,9 +92,9 @@
     <hr>
     <div>
         <a name = "Events"></a><h2>EVENTS</h2>
-        <img src="comp2.png" alt="">
-        <img src="comp2.png" alt="">
-        <img src="comp2.png" alt="">
+        <img src="static/images/comp2.png" alt="">
+        <img src="static/images/comp2.png" alt="">
+        <img src="static/images/comp2.png" alt="">
         <p>A complete IT Solution!</p>
     </div>
     <hr>
@@ -115,7 +115,7 @@
         <p>Thapathali,Kathmandu Nepal</p>
         <p>subratdixit@gmail.com</p>
         <p>9841703489</p>
-        <img src="map.png" alt="">
+        <img src="static/images/map.png" alt="">
     </div>
 
 

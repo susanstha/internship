@@ -5,7 +5,7 @@ h2{
 .title{
     background-image: linear-gradient(to bottom right, red, yellow);
     height: 30px;
-    margin: -20px -20px 0 -20px;
+    margin: -20px -20px 10px -20px;
 }
 body{
     background-color: black;
