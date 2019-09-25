@@ -9,12 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <style>
-    /* .fakeimg {
-      height: 200px;
-      background: #aaa;
-    } */
-  </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -60,7 +54,7 @@
     
       <div class="col-sm-4">
         <div>
-          <img src="static/images/sochware.jpg" width="400" height="180" alt="Sochware Image">
+          <img src="static/images/sochware.jpg" class="img-fluid" width="400" height="180" alt="Sochware Image">
         </div>
       </div>
     </div>
@@ -83,7 +77,7 @@
           <div class="col-sm-3">
             <h3>Sochware1</h3>
             <a href="#">
-            <img src="static/images/1.jpg" alt="Sochware1" width="100" height="100">
+            <img src="static/images/1.jpg" class="img-fluid" alt="Sochware1" width="100" height="100">
             </a>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -93,7 +87,7 @@
           <div class="col-sm-3">
             <h3>Sochware2</h3>
             <a href="#">
-            <img src="static/images/2.jpg" alt="Sochware2" width="100" height="100">
+            <img src="static/images/2.jpg" class="img-fluid" alt="Sochware2" width="100" height="100">
             </a>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -103,7 +97,7 @@
           <div class="col-sm-3">
             <h3>Sochware3</h3>
             <a href="#">
-            <img src="static/images/3.jpg" alt="Sochware3" width="100" height="100">
+            <img src="static/images/3.jpg" class="img-fluid" alt="Sochware3" width="100" height="100">
             </a>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -113,7 +107,7 @@
           <div class="col-sm-3">
             <h3>Sochware4</h3>
             <a href="#">
-            <img src="static/images/4.jpg" alt="Sochware4" width="100" height="100">
+            <img src="static/images/4.jpg" class="img-fluid" alt="Sochware4" width="100" height="100">
             </a>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -131,16 +125,16 @@
         <strong>Our Sponsers</strong>
       </div>
       <div class="col-sm-2">
-        <img src="static/images/op.jpg" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
+        <img src="static/images/op.jpg" class="img-fluid" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
       </div>
       <div class="col-sm-2">
-        <img src="static/images/op1.jpg" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
+        <img src="static/images/op1.jpg" class="img-fluid" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
       </div>
       <div class="col-sm-2">
-        <img src="static/images/op2.jpg" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
+        <img src="static/images/op2.jpg" class="img-fluid" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
       </div>
       <div class="col-sm-2">
-        <img src="static/images/op3.jpg" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
+        <img src="static/images/op3.jpg" class="img-fluid" alt="One Piece Character/s" width="50" height="50" class="mx-auto d-block">
       </div>
     </div>
   </marquee>
