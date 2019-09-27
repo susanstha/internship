@@ -1,0 +1,77 @@
+.navbar {
+    border-radius: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.navbar-brand{
+    font-family: 'Satisfy', 'cursive';
+    font-size: 30px;
+}
+.imp {
+    background-color: black;
+}
+body {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.find-me{
+    font-size: 30px;
+    padding: 10px;
+}
+.fakeimg {
+    height: 400px;
+    background: #aaa;
+    border: 2px solid black;
+
+  }
+#pagination{
+    margin-top: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    list-style: none;
+} 
+.list-group-item{
+    background-color:#292b2c;  
+}
+.page-link{
+    background-color: #292b2c;  
+    border-block-color:#292b2c; 
+    color: white;
+}
+#sub{
+    background-color: rgb(131, 131, 131);
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 25px;
+  }
+  #sub1{
+    background-color: black;
+    height: 40px;
+    width: 120px;
+    margin: 10px;
+    border-radius: 25px;
+    color: whitesmoke;
+  }
+  .round {
+      border-radius: 50%;
+      float: right;
+      margin-right: 5px;
+  }
+  .portanch{
+    font-size: 20px;
+    padding: 10px;
+}
+.img-gap{
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.webb{
+    font-size: 100px;
+    margin-left: 150px;
+
+}
+.txt{
+    text-align: center;
+}
