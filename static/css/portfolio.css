@@ -45,21 +45,21 @@ body {
     width: 100px;
     margin: 10px;
     border-radius: 25px;
-  }
-  #sub1{
+}
+#sub1{
     background-color: black;
     height: 40px;
     width: 120px;
     margin: 10px;
     border-radius: 25px;
     color: whitesmoke;
-  }
-  .round {
-      border-radius: 50%;
-      float: right;
-      margin-right: 5px;
-  }
-  .portanch{
+}
+.round {
+    border-radius: 50%;
+    float: right;
+    margin-right: 5px;
+}
+.portanch{
     font-size: 20px;
     padding: 10px;
 }
@@ -74,4 +74,13 @@ body {
 }
 .txt{
     text-align: center;
+}
+.invalid-feedback{
+    color: black;
+}
+.wrapper {
+    text-align: center;
+}
+.foot{
+    color: whitesmoke;
 }
