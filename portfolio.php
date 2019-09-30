@@ -401,8 +401,9 @@
         </a>
       </div>
       <hr>
-      <h4>Copy right: &copy; susanstha | All rights reserved</h4>
+      <h4>Copy right: &copy; susanshrestha | All rights reserved</h4>
     </div>
   </div>
+
 </body>
 </html>

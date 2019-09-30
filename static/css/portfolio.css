@@ -106,23 +106,16 @@ p{
 .show > .test {
     background:rgb(25, 26, 25);
 }
-
 @media only screen and (max-width: 700px) {
-.responsive {
-    width: 80%;
-    margin: 6px 0;
-}
-.blockquote > p {
-    font-size: 20px;
+    .responsive {
+        width: 80%;
+        margin: 6px 0;
 }
 }
-
+    
 @media only screen and (max-width: 500px) {
-.responsive {
-    width: 100%;
-}
-.blockquote > p {
-    font-size: 20px;
+    .responsive {
+        width: 100%;
 }
 }
 
