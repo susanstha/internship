@@ -22,7 +22,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto test">
             <li class="nav-item active imp">
                 <a class="nav-link" href="#aboutme">About</a>
             </li>
@@ -88,7 +88,7 @@
           <div class="row">
             <div class="col-sm-10">
                 <div>
-                  <img src="static/images/op2.jpg" class="img-fluid rounded-circle" width="300" height="300" alt="">
+                  <img src="static/images/op2.jpg" class="img-fluid rounded-circle responsive" width="300" height="300" alt="">
                 </div>
             </div>
             <div class="col-sm-2">
@@ -122,7 +122,7 @@
         </div>
         <div class="col-sm-5">
           <div>
-            <img src="static/images/op1.jpg" class="img-fluid rounded-circle" width="300" height="300" alt="">
+            <img src="static/images/op1.jpg" class="img-fluid rounded-circle responsive" width="300" height="300" alt="">
           </div>
           </div>
         </div>
@@ -134,11 +134,11 @@
             <h1>Portfolio</h1>
         </div>
         <div class="col-sm-3">
-            <button type="button" class="btn btn-dark round"><i class="fas fa-less-than"></i></button>
             <button type="button" class="btn btn-dark round"><i class="fas fa-greater-than"></i></button>
+            <button type="button" class="btn btn-dark round"><i class="fas fa-less-than"></i></button>
           </div>
       </div>
-      <div>
+      <div class="navv">
       <a class="active portanch" href="#">All</a>
       <a class="portanch" href="#">Logo</a>
       <a class="portanch" href="#">Websites</a>
@@ -148,7 +148,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <a data-toggle="modal" href="#myModal">
-                    <img class="img-gap rounded" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
+                    <img class="img-gap rounded responsive" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
                 </a>
                 <div class="modal fade" id="myModal">
                   <div class="modal-dialog modal-dialog-centered">
@@ -173,7 +173,7 @@
             </div>
             <div class="col-sm-4">
                 <a data-toggle="modal" href="#myModal">
-                    <img class="img-gap rounded" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
+                    <img class="img-gap rounded responsive" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
                 </a>
                 <div class="modal fade" id="myModal">
                   <div class="modal-dialog modal-dialog-centered">
@@ -198,7 +198,7 @@
             </div>
             <div class="col-sm-4">
                 <a data-toggle="modal" href="#myModal">
-                    <img class="img-gap rounded" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
+                    <img class="img-gap rounded responsive" src="static/images/op.jpg" alt="One Piece Character/s" width="300px" height="400px">
                 </a>
                 <div class="modal fade" id="myModal">
                   <div class="modal-dialog modal-dialog-centered">
@@ -276,7 +276,7 @@
           <div class="carousel-item active">
             <div class="row">
               <div class="col-sm-6">
-                  <img class="img-gap rounded" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
+                  <img class="img-gap rounded responsive" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
               </div>
               <div class="col-sm-6">
                 <blockquote class="blockquote">
@@ -293,7 +293,7 @@
           <div class="carousel-item">
             <div class="row">
               <div class="col-sm-6">
-                  <img class="img-gap rounded" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
+                  <img class="img-gap rounded responsive" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
               </div>
               <div class="col-sm-6">
                 <blockquote class="blockquote">
@@ -310,7 +310,7 @@
           <div class="carousel-item">
             <div class="row">
               <div class="col-sm-6">
-                  <img class="img-gap rounded" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
+                  <img class="img-gap rounded responsive" src="static/images/op3.jpg" alt="One Piece Character/s" width="400px" height="400px">
               </div>
               <div class="col-sm-6">
                 <blockquote class="blockquote">
