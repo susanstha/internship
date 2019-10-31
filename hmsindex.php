@@ -52,13 +52,13 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="hospitaladmin.php">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="hospitaldept.php">
+        <a class="nav-link" href="#">
           <i class="fas fa-sitemap"></i>
           <span>Departments</span>
         </a>
@@ -166,176 +166,17 @@
         </li>
     </ul>
     <div id="content-wrapper">
-      <!-- cards -->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-md"></i>
+      <!-- Sticky Footer -->
+      <footer class="sticky-footer">
+          <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+              <span>Copyright © HMS 2019</span>
               </div>
-              <div class="mr-5"><h2>Doctors</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>8</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
           </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-injured"></i>
-              </div>
-              <div class="mr-5"><h2>Patients</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>24</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-stethoscope"></i>
-              </div>
-              <div class="mr-5"><h2>Appointment</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>6</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-sitemap"></i>
-              </div>
-              <div class="mr-5"><h2>Departments</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldept.php">
-              <span class="float-left"><h4>4</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style=" margin-top: 30px;">
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-calendar-check"></i>
-              </div>
-              <div class="mr-5"><h2>Schedules</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-briefcase-medical"></i>
-              </div>
-              <div class="mr-5"><h2>Medicines</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-friends"></i>
-              </div>
-              <div class="mr-5"><h2>Donors</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-bed"></i>
-              </div>
-              <div class="mr-5"><h2>Beds</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style=" margin-top: 50px;">
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-success button">Add Patients</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-danger button">Add Donor</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-warning button">Add Doctor</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-dark button">Add Appointment</button>
-        </div>
-
-      </div>
-
+      </footer>
     </div>
   </div>
-
-  <div>
-          <!-- Sticky Footer -->
-          <footer class="sticky-footer">
-    <div class="footer-copyright py-3 text-center">
-    <span>Copyright © HMS 2019</span>
-    </div>
-  </footer>
-  </div>
-
-    
-       
-    
-
-    
-
-
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
@@ -357,11 +198,8 @@
       this.scrollTop += (delta < 0 ? 1 : -1) * 30;
       e.preventDefault();
     }
-  });
-})(jQuery); // End of use strict
-
-
-
+    });
+    })(jQuery); // End of use strict
     </script>
 </body>
 </html>
