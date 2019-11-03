@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Departments</title>
+    <title>Holidays</title>
 </head>
 <body>
           <!-- navbar -->
@@ -171,36 +171,47 @@
           <div class="container-fluid">
               <div class="row">
                   <div class="col-sm-8">
-                    <h3>List of Departments</h3>
+                    <h3>List of Holidays</h3>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adddeptt">Add new</button>
-                      <div class="modal fade" id="adddeptt" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addholidays">Add new</button>
+                      <div class="modal fade" id="addholidays" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="deptModalLabel">Add Department</h5>
+                              <h5 class="modal-title" id="deptModalLabel">Add Holidays</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
                             <div class="modal-body">
-                              <div>
-                                <form action="">
-                                  <div class="form-group">
-                                    <label for="departtname">Name</label>
-                                    <input type="text" id="departtname" name="dname" class="form-control">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="departtdesc">Description</label>
-                                      <textarea class="form-control" id="departtdesc" rows="3" rows="10"></textarea>
-                                  </div>
-                                </form>
-                              </div>
+                                <div>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="namedoc">Doctor</label>
+                                            <input type="text" id="namedoc" name="doccname" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="schdate">Date</label>
+                                            <input type="date" id="schdate" name="schdate" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="schweekday">Weekday</label>
+                                            <select class="form-control" id="schweekday" name="schweekday">
+                                                <option>Sunday</option>
+                                                <option>Monday</option>
+                                                <option>Tuesday</option>
+                                                <option>Wednesday</option>
+                                                <option>Thursday</option>
+                                                <option>Friday</option>
+                                                <option>Saturday</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn btn-primary mr-auto">Submit</button>
                             </div>
                           </div>
                         </div>
@@ -209,61 +220,75 @@
                 </div>
               <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <table id="dept_list" class="display" style="width:100%">
+                      <table id="holiday_list" class="display" style="width:100%">
                           <thead>
                               <tr>
-                                  <th>Dept ID</th>
-                                  <th>Name</th>
-                                  <th>Description</th>
-                                  <th>Options</th>
+                                <th>S.N.</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Day</th>
+                                <th>Options</th>
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Add Department</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <div>
-                                              <form action="">
-                                                <div class="form-group">
-                                                  <label for="departtname">Name</label>
-                                                  <input type="text" id="departtname" name="dname" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="departtdesc">Description</label>
-                                                    <textarea class="form-control" id="departtdesc" rows="3" rows="10"></textarea>
-                                                </div>
-                                              </form>
-                                            </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                          </div>
+                                <td>____ __ __</td>
+                                <td>_____</td>
+                                <td>_____</td>
+                                <td>____ __ __</td>
+                                <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addholidays">Edit</button>
+                                <div class="modal fade" id="addholidays" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="deptModalLabel">Add Holidays</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                         </div>
-                                      </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                        <label for="namedoc">Doctor</label>
+                                                        <input type="text" id="namedoc" name="doccname" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="schdate">Date</label>
+                                                        <input type="date" id="schdate" name="schdate" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="schweekday">Weekday</label>
+                                                        <select class="form-control" id="schweekday" name="schweekday">
+                                                            <option>Sunday</option>
+                                                            <option>Monday</option>
+                                                            <option>Tuesday</option>
+                                                            <option>Wednesday</option>
+                                                            <option>Thursday</option>
+                                                            <option>Friday</option>
+                                                            <option>Saturday</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary mr-auto">Submit</button>
+                                        </div>
                                     </div>
+                                    </div>
+                                </div>
                                     <button type="button" class="btn btn-danger">Delete </button>
-                                  </td>
+                                </td>
                               </tr>
                               <tr>
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete </button>
                                   </td>
 
@@ -272,8 +297,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -281,8 +307,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -290,8 +317,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -299,8 +327,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -308,8 +337,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -317,8 +347,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -326,8 +357,9 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
@@ -335,18 +367,20 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
                                   </td>
                               </tr>
                           </tbody>
                           <tfoot>
                               <tr>
-                                  <th>Dept ID</th>
-                                  <th>Name</th>
-                                  <th>Description</th>
-                                  <th>Options</th>
+                                <th>S.N.</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Day</th>
+                                <th>Options</th>
                               </tr>
                           </tfoot>
                       </table>
@@ -367,7 +401,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
       $(document).ready(function() {
-    $('#dept_list').DataTable({     
+    $('#holiday_list').DataTable({     
       "scrollY": "200px",
       "scrollCollapse": true,
       "paging": false,

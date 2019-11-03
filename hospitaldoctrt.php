@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Admin</title>
+    <title>Treatment History</title>
 </head>
 <body>
           <!-- navbar -->
@@ -166,191 +167,154 @@
         </li>
     </ul>
     <div id="content-wrapper">
-      <!-- cards -->
-      <div class="row">
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-md"></i>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h3>Treatment History</h3>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <table id="treatment_list" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Doctor ID</th>
+                                    <th> Doctor Name</th>
+                                    <th>No. of patients</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Details</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Doctor ID</th>
+                                    <th> Doctor Name</th>
+                                    <th>No. of patients</th>
+                                    <th>Remarks</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
               </div>
-              <div class="mr-5"><h2>Doctors</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldoclist.php">
-              <span class="float-left"><h4>8</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
           </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-injured"></i>
-              </div>
-              <div class="mr-5"><h2>Patients</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalpatientlist.php">
-              <span class="float-left"><h4>24</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-stethoscope"></i>
-              </div>
-              <div class="mr-5"><h2>Appointment</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>6</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-sitemap"></i>
-              </div>
-              <div class="mr-5"><h2>Departments</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldept.php">
-              <span class="float-left"><h4>4</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
       </div>
-
-      <div class="row" style=" margin-top: 30px;">
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-calendar-check"></i>
-              </div>
-              <div class="mr-5"><h2>Schedules</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalsch.php">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-briefcase-medical"></i>
-              </div>
-              <div class="mr-5"><h2>Medicines</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-user-friends"></i>
-              </div>
-              <div class="mr-5"><h2>Donors</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fas fa-bed"></i>
-              </div>
-              <div class="mr-5"><h2>Beds</h2></div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left"><h4>View Details</h4></span>
-              <span class="float-right">
-                <i class="fas fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row" style=" margin-top: 50px;">
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-success button">Add Patients</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-danger button">Add Donor</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-warning button">Add Doctor</button>
-        </div>
-        <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-dark button">Add Appointment</button>
-        </div>
-
-      </div>
-
     </div>
   </div>
-
-  <div>
-          <!-- Sticky Footer -->
-    <footer class="sticky-footer">
-      <div class="footer-copyright py-3 text-center">
-      <span>Copyright © HMS 2019</span>
-      </div>
-    </footer>
-  </div>
+        <!-- Sticky Footer -->
+  <footer class="sticky-footer">
+    <div class="footer-copyright py-3 text-center">
+    <span>Copyright © HMS 2019</span>
+    </div>
+  </footer>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
+      $(document).ready(function() {
+    $('#treatment_list').DataTable({     
+      "scrollY": "200px",
+      "scrollCollapse": true,
+      "paging": false,
+      "scrollX": true
+                      });
+                        } );
         (function($) {
-            "use strict"; // Start of use strict
+      "use strict"; // Start of use strict
 
-            // Toggle the side navigation
-            $("#sidebarToggle").on('click', function(e) {
-              e.preventDefault();
-              $("body").toggleClass("sidebar-toggled");
-              $(".sidebar").toggleClass("toggled");
-            });
+      // Toggle the side navigation
+      $("#sidebarToggle").on('click', function(e) {
+        e.preventDefault();
+        $("body").toggleClass("sidebar-toggled");
+        $(".sidebar").toggleClass("toggled");
+      });
 
-            // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-            $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
-              if ($(window).width() > 768) {
-                var e0 = e.originalEvent,
-                  delta = e0.wheelDelta || -e0.detail;
-                this.scrollTop += (delta < 0 ? 1 : -1) * 30;
-                e.preventDefault();
-              }
-            });
-          })(jQuery); // End of use strict
-    </script>
+      // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+      $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+        if ($(window).width() > 768) {
+          var e0 = e.originalEvent,
+            delta = e0.wheelDelta || -e0.detail;
+          this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+          e.preventDefault();
+        }
+        });
+        })(jQuery); // End of use strict
+      </script>
 </body>
 </html>
