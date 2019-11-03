@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Patient's List</title>
+    <title>Patient's Case</title>
 </head>
 <body>
           <!-- navbar -->
@@ -171,15 +171,15 @@
             <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h3>List of Patients</h3>
+                    <h3>Patients Cases</h3>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpatient">Add new</button>
-                      <div class="modal fade bd-example-modal-lg" id="addpatient" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addcase">Add new</button>
+                      <div class="modal fade bd-example-modal-lg" id="addcase" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="deptModalLabel">Add Patients</h5>
+                              <h5 class="modal-title" id="deptModalLabel">Add Case</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -189,56 +189,17 @@
                                 <form action="" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="pcasedate">Date</label>
+                                                <input type="date" id="pcasedate" name="pcasedate" class="form-control">
+                                            </div>
                                             <div class="form-group ">
-                                                <label for="pfname">First Name</label>
-                                                <input type="text" id="pfname" name="pfname" placeholder="First Name" class="form-control">
-                                                <label for="pmname">Middle Name</label>
-                                                <input type="text" id="pmname" name="pmname" placeholder="Middle Name" class="form-control">
-                                                <label for="plname">Last Name</label>
-                                                <input type="text" id="plname" name="plname" placeholder="Last Name" class="form-control">
+                                                <label for="pname">Patient</label>
+                                                <input type="text" id="pname" name="pname" placeholder="Patient's Name" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="pemail">Email</label>
-                                                <input type="Email" id="pemail" name="pemail" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdob">Date of Birth</label>
-                                                <input type="date" id="pdob" name="pdob" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdoe">Date of Entry</label>
-                                                <input type="date" id="pdoe" name="pdoe" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="paddress">Address</label>
-                                                <input type="text" id="paddress" name="paddress" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pcontact">Contact</label>
-                                                <input type="number" id="pcontact" name="pcontact" class="form-control">                                                </div>
-                                            <div class="form-group">
-                                                <label for="pbloodgroup">Blood Group</label>
-                                                <input type="text" id="pbloodgroup" name="pbloodgroup" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="page">Age</label>
-                                                <input type="text" id="page" name="page" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pcoe">Cause of Entry</label>
-                                                <input type="text" id="pcoe" name="pcoe" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="psex">Sex</label>
-                                                <input type="text" id="psex" name="psex" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdepartment">Department Assigned</label>
-                                                <select class="form-control" id="pdepartment" name="docdepartment">
+                                                <label for="deptname">Department Assigned</label>
+                                                <select class="form-control" id="deptname" name="deptname">
                                                     <option>Opthalmology</option>
                                                     <option>Neurology</option>
                                                     <option>Radiology</option>
@@ -247,19 +208,29 @@
                                                     <option>Cardiology</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="dname">Doctor Assigned</label>
-                                                <input type="text" id="dname" name="dname" class="form-control">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group ">
+                                                <label for="dname">Doctor</label>
+                                                <input type="text" id="dname" name="dname" placeholder="Last Name" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="ptype">Patient Type</label>
-                                                <select class="form-control" id="ptype" name="ptype">
-                                                        <option>Inhouse</option>
-                                                        <option>Visiting</option>
-                                                    </select>                                            </div>
+                                                <label for="caseinvestigation">Investigation</label>
+                                                <input type="text" id="caseinvestigation" name="caseinvestigation" class="form-control">
+                                            </div>
                                             <div class="form-group">
-                                                <label for="ppic">Choose a profile picture:</label>
-                                                <input type="file" id="ppic" class="form-control-file border" name="ppic">
+                                                <label for="casediagnosis">Diagnosis</label>
+                                                <input type="text" id="casediagnosis" name="casediagnosis" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="casedocuments">Documents</label>
+                                                <input type="file" id="casedocuments" class="form-control-file border" name="casedocuments">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="caseremarks">Remarks</label>
+                                                <input type="text" id="caseremarks" name="caseremarks" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -276,15 +247,17 @@
                 </div>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <table id="p_list" class="display" style="width:100%">
+                        <table id="case_list" class="display" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>S.N.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Profile</th>
+                                    <th>Date</th>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Department</th>
+                                    <th>Investigation</th>
+                                    <th>Diagnosis</th>
+                                    <th>Documents</th>
+                                    <th>Remarks</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
@@ -296,13 +269,15 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpatient">Edit</button>
-                                        <div class="modal fade bd-example-modal-lg" id="addpatient" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addcase">Edit</button>
+                                        <div class="modal fade bd-example-modal-lg" id="addcase" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
                                                   <div class="modal-content">
                                                     <div class="modal-header">
-                                                      <h5 class="modal-title" id="deptModalLabel">Add Patients</h5>
+                                                      <h5 class="modal-title" id="deptModalLabel">Add Case</h5>
                                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                       </button>
@@ -312,56 +287,17 @@
                                                         <form action="" method="POST" enctype="multipart/form-data">
                                                             <div class="row">
                                                                 <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <label for="pcasedate">Date</label>
+                                                                        <input type="date" id="pcasedate" name="pcasedate" class="form-control">
+                                                                    </div>
                                                                     <div class="form-group ">
-                                                                        <label for="pfname">First Name</label>
-                                                                        <input type="text" id="pfname" name="pfname" placeholder="First Name" class="form-control">
-                                                                        <label for="pmname">Middle Name</label>
-                                                                        <input type="text" id="pmname" name="pmname" placeholder="Middle Name" class="form-control">
-                                                                        <label for="plname">Last Name</label>
-                                                                        <input type="text" id="plname" name="plname" placeholder="Last Name" class="form-control">
+                                                                        <label for="pname">Patient</label>
+                                                                        <input type="text" id="pname" name="pname" placeholder="Patient's Name" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="pemail">Email</label>
-                                                                        <input type="Email" id="pemail" name="pemail" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pdob">Date of Birth</label>
-                                                                        <input type="date" id="pdob" name="pdob" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pdoe">Date of Entry</label>
-                                                                        <input type="date" id="pdoe" name="pdoe" class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-4">
-                                                                    <div class="form-group">
-                                                                        <label for="paddress">Address</label>
-                                                                        <input type="text" id="paddress" name="paddress" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pcontact">Contact</label>
-                                                                        <input type="number" id="pcontact" name="pcontact" class="form-control">                                                </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pbloodgroup">Blood Group</label>
-                                                                        <input type="text" id="pbloodgroup" name="pbloodgroup" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="page">Age</label>
-                                                                        <input type="text" id="page" name="page" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pcoe">Cause of Entry</label>
-                                                                        <input type="text" id="pcoe" name="pcoe" class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-4">
-                                                                    <div class="form-group">
-                                                                        <label for="psex">Sex</label>
-                                                                        <input type="text" id="psex" name="psex" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pdepartment">Department Assigned</label>
-                                                                        <select class="form-control" id="pdepartment" name="docdepartment">
+                                                                        <label for="deptname">Department Assigned</label>
+                                                                        <select class="form-control" id="deptname" name="deptname">
                                                                             <option>Opthalmology</option>
                                                                             <option>Neurology</option>
                                                                             <option>Radiology</option>
@@ -370,19 +306,29 @@
                                                                             <option>Cardiology</option>
                                                                         </select>
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <label for="dname">Doctor Assigned</label>
-                                                                        <input type="text" id="dname" name="dname" class="form-control">
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group ">
+                                                                        <label for="dname">Doctor</label>
+                                                                        <input type="text" id="dname" name="dname" placeholder="Last Name" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="ptype">Patient Type</label>
-                                                                        <select class="form-control" id="ptype" name="ptype">
-                                                                                <option>Inhouse</option>
-                                                                                <option>Visiting</option>
-                                                                            </select>                                            </div>
+                                                                        <label for="caseinvestigation">Investigation</label>
+                                                                        <input type="text" id="caseinvestigation" name="caseinvestigation" class="form-control">
+                                                                    </div>
                                                                     <div class="form-group">
-                                                                        <label for="ppic">Choose a profile picture:</label>
-                                                                        <input type="file" id="ppic" class="form-control-file border" name="ppic">
+                                                                        <label for="casediagnosis">Diagnosis</label>
+                                                                        <input type="text" id="casediagnosis" name="casediagnosis" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <label for="casedocuments">Documents</label>
+                                                                        <input type="file" id="casedocuments" class="form-control-file border" name="casedocuments">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="caseremarks">Remarks</label>
+                                                                        <input type="text" id="caseremarks" name="caseremarks" class="form-control">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -394,7 +340,7 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                        </div>
+                                              </div>
                                         <button type="button" class="btn btn-danger">Delete </button>
                                     </td>
                                 </tr>
@@ -403,6 +349,8 @@
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -417,16 +365,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -441,16 +379,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -465,16 +393,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -489,6 +407,8 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>
                                     <button type="button" class="btn btn-secondary">Edit</button>
                                     <button type="button" class="btn btn-secondary">Delete</button>
@@ -499,6 +419,50 @@
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-secondary">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-secondary">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>
+                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-secondary">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
+                                    <td>____ __ __</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -509,12 +473,14 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>S.N.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Profile</th>
+                                    <th>Date</th>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Department</th>
+                                    <th>Investigation</th>
+                                    <th>Diagnosis</th>
+                                    <th>Documents</th>
+                                    <th>Remarks</th>
                                     <th>Options</th>
                                 </tr>
                             </tfoot>
@@ -536,7 +502,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
       $(document).ready(function() {
-    $('#p_list').DataTable({     
+    $('#case_list').DataTable({     
       "scrollY": "200px",
       "scrollCollapse": true,
       "paging": false,

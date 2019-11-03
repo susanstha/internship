@@ -171,15 +171,15 @@
           <div class="container-fluid">
               <div class="row">
                   <div class="col-sm-8">
-                    <h3>List of Schedules</h3>
+                    <h3>List of Appointments</h3>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addschedules">Add new</button>
-                      <div class="modal fade" id="addschedules" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addappointment">Add new</button>
+                      <div class="modal fade" id="addappointment" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="deptModalLabel">Add Schedules</h5>
+                              <h5 class="modal-title" id="deptModalLabel">Add Appointments</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -188,33 +188,25 @@
                                 <div>
                                     <form action="">
                                         <div class="form-group">
-                                            <label for="namedoc">Doctor</label>
-                                            <input type="text" id="namedoc" name="doccname" class="form-control">
+                                            <label for="appointdate">Date</label>
+                                            <input type="date" id="appointdate" name="appointdate" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label for="schdate">Date</label>
-                                            <input type="date" id="schdate" name="schdate" class="form-control">
+                                            <label for="appointpname">Patient</label>
+                                            <input type="text" id="appointpname" name="appointpname" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label for="schweekday">Weekday</label>
-                                            <select class="form-control" id="schweekday" name="schweekday">
-                                                <option>Sunday</option>
-                                                <option>Monday</option>
-                                                <option>Tuesday</option>
-                                                <option>Wednesday</option>
-                                                <option>Thursday</option>
-                                                <option>Friday</option>
-                                                <option>Saturday</option>
-                                            </select>
+                                            <label for="appointdname">Doctor</label>
+                                            <input type="text" id="appointdname" name="appointdname" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label for="schsttime">Start Time</label>
-                                            <input type="time" id="schsttime" name="schsttime" class="form-control">
+                                            <label for="appointtime">Appointment Time</label>
+                                            <input type="time" id="appointtime" name="appointtime" class="form-control">
                                         </div>
-                                    <div class="form-group">
-                                        <label for="schendtime">End Time</label>
-                                        <input type="time" id="schendtime" name="schendtime" class="form-control">
-                                    </div>
+                                        <div class="form-group">
+                                            <label for="appointremarks">Remarks</label>
+                                            <input type="text" id="appointremarks" name="appointremarks" class="form-control">
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -228,15 +220,15 @@
                 </div>
               <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <table id="schedule_list" class="display" style="width:100%">
+                      <table id="appointment_list" class="display" style="width:100%">
                           <thead>
                               <tr>
                                   <th>S.N.</th>
-                                  <th>Doctor</th>
                                   <th>Date</th>
-                                  <th>Day</th>
-                                  <th>Start Time</th>
-                                  <th>End Time</th>
+                                  <th>Patient</th>
+                                  <th>Doctor</th>
+                                  <th>Appointment Time</th>
+                                  <th>Remarks </th>
                                   <th>Options</th>
                               </tr>
                           </thead>
@@ -249,6 +241,48 @@
                                   <td>_____</td>
                                   <td>_____</td>
                                   <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addappointment">Edit</button>
+                                    <div class="modal fade" id="addappointment" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deptModalLabel">Add Appointments</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <form action="">
+                                                            <div class="form-group">
+                                                                <label for="appointdate">Date</label>
+                                                                <input type="date" id="appointdate" name="appointdate" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="appointpname">Patient</label>
+                                                                <input type="text" id="appointpname" name="appointpname" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="appointdname">Doctor</label>
+                                                                <input type="text" id="appointdname" name="appointdname" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="appointtime">Appointment Time</label>
+                                                                <input type="time" id="appointtime" name="appointtime" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="appointremarks">Remarks</label>
+                                                                <input type="text" id="appointremarks" name="appointremarks" class="form-control">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary mr-auto">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     </div>
                                     <button type="button" class="btn btn-danger">Delete </button>
                                   </td>
                               </tr>
@@ -356,11 +390,11 @@
                           <tfoot>
                               <tr>
                                 <th>S.N.</th>
-                                <th>Doctor</th>
                                 <th>Date</th>
-                                <th>Day</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Appointment Time</th>
+                                <th>Remarks </th>
                                 <th>Options</th>
                               </tr>
                           </tfoot>
@@ -382,7 +416,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
       $(document).ready(function() {
-    $('#schedule_list').DataTable({     
+    $('#appointment_list').DataTable({     
       "scrollY": "200px",
       "scrollCollapse": true,
       "paging": false,

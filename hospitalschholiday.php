@@ -94,7 +94,7 @@
         <div class="dropdown-menu" aria-labelledby="patientsDropdown">
           <a class="dropdown-item" href="hospitalpatientlist.php">List of Patients</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Patient Cases</a>
+          <a class="dropdown-item" href="hospitalpatientcase.php">Patient Cases</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Patients</a>
         </div>
@@ -105,7 +105,7 @@
           <span>Appointments</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="appointmentsDropdown">
-          <a class="dropdown-item" href="#">All Appointments</a>
+          <a class="dropdown-item" href="hospitalappoint.php">All Appointments</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Today's Appointments</a>
           <div class="dropdown-divider"></div>
@@ -115,7 +115,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="hospitalprescription.php">
           <i class="fas fa-prescription"></i>
           <span>Prescriptions</span></a>
       </li>
