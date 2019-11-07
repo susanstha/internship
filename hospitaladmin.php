@@ -146,9 +146,9 @@
           <span>Donor</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="donorDropdown">
-          <a class="dropdown-item" href="#">List of Donors</a>
+          <a class="dropdown-item" href="hospitaldonor.php">List of Donors</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Blood Bank</a>
+          <a class="dropdown-item" href="hospitalbloodbank.php">Blood Bank</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Donors</a>
         </div>
@@ -275,7 +275,7 @@
               </div>
               <div class="mr-5"><h2>Donors</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="hospitaldonor.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>

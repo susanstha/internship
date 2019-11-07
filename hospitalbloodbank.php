@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Add Prescriptions</title>
+    <title>Blood Bank</title>
 </head>
 <body>
           <!-- navbar -->
@@ -167,155 +167,164 @@
         </li>
     </ul>
     <div id="content-wrapper">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
-          <form action="" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="presdate">Date</label>
-                <input type="date" id="presdate" name="presdate" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="presdoctor">Doctor</label>
-                <input type="text" id="presdoctor" name="presdoctor" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="prespatient">Patient</label>
-              <input type="text" id="prespatient" name="prespatient" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="presremarks">Remarks</label>
-              <textarea class="form-control" id="presremarks" rows="3" rows="10"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmed">Add Medicine</button>
-            <div class="modal fade bd-example-modal-lg" id="addmed" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="deptModalLabel">Add Medicine</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div>
-                      <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="presmed">Medicine</label>
-                            <input type="text" id="presmed" name="presmed" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="presdosage">Dosage</label>
-                          <input type="text" id="presdosage" name="presdosage" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="presfrequency">Frequency</label>
-                          <input type="text" id="presfrequency" name="presfrequency" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="presdays">Days</label>
-                          <input type="text" id="presdays" name="presdays" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label for="presinst">Instruction</label>
-                          <input type="text" id="presinst" name="presinst" class="form-control">
-                        </div> 
-                      </form>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="submit" class="btn btn-primary mr-auto">Submit</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-          <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
+                <h3>Blood Bank</h3>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <table id="med_list" class="display" style="width:100%">
+                        <table id="bloodbank_list" class="display" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Medicine</th>
-                                    <th>Dosage</th>
-                                    <th>Frequency</th>
-                                    <th>Days</th>
-                                    <th>Instruction</th>
+                                    <th>S.N</th>
+                                    <th>Blood Group</th>
+                                    <th>Status</th>
+                                    <th>Option</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>____ __ __</td>
+                                    <td>1</td>
+                                    <td>O -</td>
                                     <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editbloodbank">Edit</button>
+                                        <div class="modal fade bd-example-modal-lg" id="editbloodbank" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="deptModalLabel">Edit</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div>
+                                                        <form action="" method="POST" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <label for="bloodstatus">Status</label>
+                                                                <input type="Email" id="bloodstatus" name="bloodstatus" class="form-control">
+                                                            </div>
+                                                        </form>
+                                                        </div>
+                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary mr-auto">Submit</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>____ __ __</td>
+                                    <td>2</td>
+                                    <td>O +</td>
                                     <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>A -</td>
                                     <td>_____</td>
-                                    <td>____ __ __</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>A +</td>
                                     <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>B -</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>B +</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>AB -</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>AB +</td>
+                                    <td>_____</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success">Edit</button>
+                                    </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Medicine</th>
-                                    <th>Dosage</th>
-                                    <th>Frequency</th>
-                                    <th>Days</th>
-                                    <th>Instruction</th>
+                                    <th>S.N</th>
+                                    <th>Blood Group</th>
+                                    <th>Status</th>
+                                    <th>Option</th>
                                 </tr>
                             </tfoot>
                         </table>
                     </div>
-                </div>
-            </div>
-          </div>  
-        </div>
+              </div>
+          </div>
       </div>
     </div>
   </div>
-          <!-- Sticky Footer -->
+        <!-- Sticky Footer -->
   <footer class="sticky-footer">
-      <div class="footer-copyright py-3 text-center">
-      <span>Copyright © HMS 2019</span>
-      </div>
+    <div class="footer-copyright py-3 text-center">
+    <span>Copyright © HMS 2019</span>
+    </div>
   </footer>
-  </div>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
-        $(document).ready(function() {
-          $('#med_list').DataTable({     
-            "scrollY": "200px",
-            "scrollCollapse": true,
-            "paging": false,
-            "scrollX": true
-          });
-        } );
+      $(document).ready(function() {
+    $('#bloodbank_list').DataTable({     
+      "scrollY": "200px",
+      "scrollCollapse": true,
+      "paging": false,
+      "scrollX": true
+                      });
+                        } );
         (function($) {
-            "use strict"; // Start of use strict
+      "use strict"; // Start of use strict
 
-            // Toggle the side navigation
-            $("#sidebarToggle").on('click', function(e) {
-              e.preventDefault();
-              $("body").toggleClass("sidebar-toggled");
-              $(".sidebar").toggleClass("toggled");
-            });
+      // Toggle the side navigation
+      $("#sidebarToggle").on('click', function(e) {
+        e.preventDefault();
+        $("body").toggleClass("sidebar-toggled");
+        $(".sidebar").toggleClass("toggled");
+      });
 
-            // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-            $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
-              if ($(window).width() > 768) {
-                var e0 = e.originalEvent,
-                  delta = e0.wheelDelta || -e0.detail;
-                this.scrollTop += (delta < 0 ? 1 : -1) * 30;
-                e.preventDefault();
-              }
-            });
-          })(jQuery); // End of use strict
-    </script>
+      // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+      $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+        if ($(window).width() > 768) {
+          var e0 = e.originalEvent,
+            delta = e0.wheelDelta || -e0.detail;
+          this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+          e.preventDefault();
+        }
+        });
+        })(jQuery); // End of use strict
+      </script>
 </body>
 </html>

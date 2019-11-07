@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Patient's List</title>
+    <title>Donor's List</title>
 </head>
 <body>
           <!-- navbar -->
@@ -171,120 +171,98 @@
             <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h3>List of Patients</h3>
+                    <h3>List of Donors</h3>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpatient">Add new</button>
-                      <div class="modal fade bd-example-modal-lg" id="addpatient" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="deptModalLabel">Add Patients</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div>
-                                <form action="" method="POST" enctype="multipart/form-data">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group ">
-                                                <label for="pfname">First Name</label>
-                                                <input type="text" id="pfname" name="pfname" placeholder="First Name" class="form-control">
-                                                <label for="pmname">Middle Name</label>
-                                                <input type="text" id="pmname" name="pmname" placeholder="Middle Name" class="form-control">
-                                                <label for="plname">Last Name</label>
-                                                <input type="text" id="plname" name="plname" placeholder="Last Name" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pemail">Email</label>
-                                                <input type="Email" id="pemail" name="pemail" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdob">Date of Birth</label>
-                                                <input type="date" id="pdob" name="pdob" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdoe">Date of Entry</label>
-                                                <input type="date" id="pdoe" name="pdoe" class="form-control">
-                                            </div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adddonor">Add new</button>
+                    <div class="modal fade bd-example-modal-lg" id="adddonor" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deptModalLabel">Add Donor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                            <form action="" method="POST" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group ">
+                                            <label for="donorfname">First Name</label>
+                                            <input type="text" id="donorfname" name="donorfname" placeholder="First Name" class="form-control">
+                                            <label for="donormname">Middle Name</label>
+                                            <input type="text" id="donormname" name="donormname" placeholder="Middle Name" class="form-control">
+                                            <label for="donorlname">Last Name</label>
+                                            <input type="text" id="donorlname" name="donorlname" placeholder="Last Name" class="form-control">
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="paddress">Address</label>
-                                                <input type="text" id="paddress" name="paddress" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pcontact">Contact</label>
-                                                <input type="number" id="pcontact" name="pcontact" class="form-control">                                                </div>
-                                            <div class="form-group">
-                                                <label for="pbloodgroup">Blood Group</label>
-                                                <input type="text" id="pbloodgroup" name="pbloodgroup" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="page">Age</label>
-                                                <input type="text" id="page" name="page" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pcoe">Cause of Entry</label>
-                                                <input type="text" id="pcoe" name="pcoe" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="psex">Sex</label>
-                                                <input type="text" id="psex" name="psex" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pdepartment">Department Assigned</label>
-                                                <select class="form-control" id="pdepartment" name="docdepartment">
-                                                    <option>Opthalmology</option>
-                                                    <option>Neurology</option>
-                                                    <option>Radiology</option>
-                                                    <option>Gynaecology</option>
-                                                    <option>Pathology</option>
-                                                    <option>Cardiology</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="dname">Doctor Assigned</label>
-                                                <input type="text" id="dname" name="dname" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="ptype">Patient Type</label>
-                                                <select class="form-control" id="ptype" name="ptype">
-                                                        <option>Inhouse</option>
-                                                        <option>Visiting</option>
-                                                    </select>                                            </div>
-                                            <div class="form-group">
-                                                <label for="ppic">Choose a profile picture:</label>
-                                                <input type="file" id="ppic" class="form-control-file border" name="ppic">
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="donoremail">Email</label>
+                                            <input type="Email" id="donoremail" name="donoremail" class="form-control">
                                         </div>
                                     </div>
-                                </form>
-                              </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="donoraddress">Address</label>
+                                            <input type="text" id="donoraddress" name="donoraddress" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donorcontact">Contact</label>
+                                            <input type="number" id="donorcontact" name="donorcontact" class="form-control">                                                
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donorbloodgroup">Blood Group</label>
+                                            <input type="text" id="donorbloodgroup" name="donorbloodgroup" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donorage">Age</label>
+                                            <input type="text" id="donorage" name="donorage" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="donorsex">Sex</label>
+                                            <input type="text" id="donorsex" name="donorsex" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastdonateddate">Last Donated Date</label>
+                                            <input type="date" id="lastdonateddate" name="lastdonateddate" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donorprofile">Profile</label>
+                                            <textarea class="form-control" id="donorprofile" rows="3" rows="10"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="donorpic">Choose a profile picture:</label>
+                                            <input type="file" id="donorpic" class="form-control-file border" name="donorpic">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary mr-auto">Submit</button>
-                            </div>
-                          </div>
                         </div>
-                      </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary mr-auto">Submit</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <table id="p_list" class="display" style="width:100%">
+                        <table id="donor_list" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>S.N.</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Profile</th>
+                                    <th>Contact</th>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>Blood Group</th>
+                                    <th>Last Donated</th>
                                     <th>Options</th>
                                 </tr>
                             </thead>
@@ -296,104 +274,82 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpatient">Edit</button>
-                                        <div class="modal fade bd-example-modal-lg" id="addpatient" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-lg" role="document">
-                                                  <div class="modal-content">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adddonor">Edit</button>
+                                        <div class="modal fade bd-example-modal-lg" id="adddonor" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
                                                     <div class="modal-header">
-                                                      <h5 class="modal-title" id="deptModalLabel">Add Patients</h5>
-                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <h5 class="modal-title" id="deptModalLabel">Add Donor</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
-                                                      </button>
+                                                        </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                      <div>
+                                                        <div>
                                                         <form action="" method="POST" enctype="multipart/form-data">
                                                             <div class="row">
                                                                 <div class="col-sm-4">
                                                                     <div class="form-group ">
-                                                                        <label for="pfname">First Name</label>
-                                                                        <input type="text" id="pfname" name="pfname" placeholder="First Name" class="form-control">
-                                                                        <label for="pmname">Middle Name</label>
-                                                                        <input type="text" id="pmname" name="pmname" placeholder="Middle Name" class="form-control">
-                                                                        <label for="plname">Last Name</label>
-                                                                        <input type="text" id="plname" name="plname" placeholder="Last Name" class="form-control">
+                                                                        <label for="donorfname">First Name</label>
+                                                                        <input type="text" id="donorfname" name="donorfname" placeholder="First Name" class="form-control">
+                                                                        <label for="donormname">Middle Name</label>
+                                                                        <input type="text" id="donormname" name="donormname" placeholder="Middle Name" class="form-control">
+                                                                        <label for="donorlname">Last Name</label>
+                                                                        <input type="text" id="donorlname" name="donorlname" placeholder="Last Name" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="pemail">Email</label>
-                                                                        <input type="Email" id="pemail" name="pemail" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pdob">Date of Birth</label>
-                                                                        <input type="date" id="pdob" name="pdob" class="form-control">
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pdoe">Date of Entry</label>
-                                                                        <input type="date" id="pdoe" name="pdoe" class="form-control">
+                                                                        <label for="donoremail">Email</label>
+                                                                        <input type="Email" id="donoremail" name="donoremail" class="form-control">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-4">
                                                                     <div class="form-group">
-                                                                        <label for="paddress">Address</label>
-                                                                        <input type="text" id="paddress" name="paddress" class="form-control">
+                                                                        <label for="donoraddress">Address</label>
+                                                                        <input type="text" id="donoraddress" name="donoraddress" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="pcontact">Contact</label>
-                                                                        <input type="number" id="pcontact" name="pcontact" class="form-control">                                                </div>
-                                                                    <div class="form-group">
-                                                                        <label for="pbloodgroup">Blood Group</label>
-                                                                        <input type="text" id="pbloodgroup" name="pbloodgroup" class="form-control">
+                                                                        <label for="donorcontact">Contact</label>
+                                                                        <input type="number" id="donorcontact" name="donorcontact" class="form-control">                                                
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="page">Age</label>
-                                                                        <input type="text" id="page" name="page" class="form-control">
+                                                                        <label for="donorbloodgroup">Blood Group</label>
+                                                                        <input type="text" id="donorbloodgroup" name="donorbloodgroup" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="pcoe">Cause of Entry</label>
-                                                                        <input type="text" id="pcoe" name="pcoe" class="form-control">
+                                                                        <label for="donorage">Age</label>
+                                                                        <input type="text" id="donorage" name="donorage" class="form-control">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-sm-4">
                                                                     <div class="form-group">
-                                                                        <label for="psex">Sex</label>
-                                                                        <input type="text" id="psex" name="psex" class="form-control">
+                                                                        <label for="donorsex">Sex</label>
+                                                                        <input type="text" id="donorsex" name="donorsex" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="pdepartment">Department Assigned</label>
-                                                                        <select class="form-control" id="pdepartment" name="docdepartment">
-                                                                            <option>Opthalmology</option>
-                                                                            <option>Neurology</option>
-                                                                            <option>Radiology</option>
-                                                                            <option>Gynaecology</option>
-                                                                            <option>Pathology</option>
-                                                                            <option>Cardiology</option>
-                                                                        </select>
+                                                                        <label for="lastdonateddate">Last Donated Date</label>
+                                                                        <input type="date" id="lastdonateddate" name="lastdonateddate" class="form-control">
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="dname">Doctor Assigned</label>
-                                                                        <input type="text" id="dname" name="dname" class="form-control">
+                                                                        <label for="donorprofile">Profile</label>
+                                                                        <textarea class="form-control" id="donorprofile" rows="3" rows="10"></textarea>
                                                                     </div>
                                                                     <div class="form-group">
-                                                                        <label for="ptype">Patient Type</label>
-                                                                        <select class="form-control" id="ptype" name="ptype">
-                                                                                <option>Inhouse</option>
-                                                                                <option>Visiting</option>
-                                                                            </select>                                            </div>
-                                                                    <div class="form-group">
-                                                                        <label for="ppic">Choose a profile picture:</label>
-                                                                        <input type="file" id="ppic" class="form-control-file border" name="ppic">
+                                                                        <label for="donorpic">Choose a profile picture:</label>
+                                                                        <input type="file" id="donorpic" class="form-control-file border" name="donorpic">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </form>
-                                                      </div>
+                                                        </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="submit" class="btn btn-primary mr-auto">Submit</button>
                                                     </div>
-                                                  </div>
                                                 </div>
+                                            </div>
                                         </div>
                                         <button type="button" class="btn btn-danger">Delete </button>
                                     </td>
@@ -405,9 +361,11 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
+                                    <td>_____</td>
+                                    <td>_____</td>
                                     <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete </button>
+                                        <button type="button" class="btn btn-secondary">Edit</button>
+                                        <button type="button" class="btn btn-secondary">Delete </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -417,16 +375,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -441,16 +389,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -465,16 +403,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -489,16 +417,6 @@
                                     <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
-                                    <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>____ __ __</td>
-                                    <td>_____</td>
-                                    <td>_____</td>
-                                    <td>____ __ __</td>
                                     <td>_____</td>
                                     <td>_____</td>
                                     <td>
@@ -512,9 +430,11 @@
                                     <th>S.N.</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Profile</th>
+                                    <th>Contact</th>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>Blood Group</th>
+                                    <th>Last Donated</th>
                                     <th>Options</th>
                                 </tr>
                             </tfoot>
@@ -536,13 +456,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
       $(document).ready(function() {
-        $('#p_list').DataTable({     
-          "scrollY": "200px",
-          "scrollCollapse": true,
-          "paging": false,
-          "scrollX": true
-        });
-      } );
+    $('#donor_list').DataTable({     
+      "scrollY": "200px",
+      "scrollCollapse": true,
+      "paging": false,
+      "scrollX": true
+                      });
+                        } );
         (function($) {
       "use strict"; // Start of use strict
 

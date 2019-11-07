@@ -147,9 +147,9 @@
           <span>Donor</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="donorDropdown">
-          <a class="dropdown-item" href="#">List of Donors</a>
+          <a class="dropdown-item" href="hospitaldonor.php">List of Donors</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Blood Bank</a>
+          <a class="dropdown-item" href="hospitalbloodbank.php">Blood Bank</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Donors</a>
         </div>
@@ -203,46 +203,47 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="docaddress">Address</label>
-                                                <input type="text" id="docaddress" name="docaddress" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                <label for="doccontact">Contact</label>
-                                                <input type="number" id="doccontact" name="doccontact" class="form-control">                                                </div>
-                                                <div class="form-group">
-                                                <label for="docbloodgroup">Blood Group</label>
-                                                <input type="text" id="docbloodgroup" name="docbloodgroup" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                <label for="docage">Age</label>
-                                                <input type="text" id="docage" name="docage" class="form-control">
-                                            </div>
+                                          <div class="form-group">
+                                            <label for="docaddress">Address</label>
+                                            <input type="text" id="docaddress" name="docaddress" class="form-control">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="doccontact">Contact</label>
+                                            <input type="number" id="doccontact" name="doccontact" class="form-control">                                                
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="docbloodgroup">Blood Group</label>
+                                            <input type="text" id="docbloodgroup" name="docbloodgroup" class="form-control">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="docage">Age</label>
+                                            <input type="text" id="docage" name="docage" class="form-control">
+                                          </div>
                                         </div>
                                         <div class="col-sm-4">
+                                          <div class="form-group">
+                                            <label for="docsex">Sex</label>
+                                            <input type="text" id="docsex" name="docsex" class="form-control">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="docdepartment">Department</label>
+                                            <select class="form-control" id="docdepartment" name="docdepartment">
+                                                <option>Opthalmology</option>
+                                                <option>Neurology</option>
+                                                <option>Radiology</option>
+                                                <option>Gynaecology</option>
+                                                <option>Pathology</option>
+                                                <option>Cardiology</option>
+                                            </select>
+                                          </div>
                                             <div class="form-group">
-                                                <label for="docsex">Sex</label>
-                                                <input type="text" id="docsex" name="docsex" class="form-control">
-                                              </div>
-                                              <div class="form-group">
-                                                <label for="docdepartment">Department</label>
-                                                <select class="form-control" id="docdepartment" name="docdepartment">
-                                                    <option>Opthalmology</option>
-                                                    <option>Neurology</option>
-                                                    <option>Radiology</option>
-                                                    <option>Gynaecology</option>
-                                                    <option>Pathology</option>
-                                                    <option>Cardiology</option>
-                                                </select>
-                                              </div>
-                                                <div class="form-group">
-                                                    <label for="docprofile">Profile</label>
-                                                    <textarea class="form-control" placeholder="Enter qualification and specialization" id="docprofile" rows="3" rows="10"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="docpic">Choose a profile picture:</label>
-                                                    <input type="file" id="docpic" class="form-control-file border" name="docpic">
+                                                <label for="docprofile">Profile</label>
+                                                <textarea class="form-control" placeholder="Enter qualification and specialization" id="docprofile" rows="3" rows="10"></textarea>
                                             </div>
+                                            <div class="form-group">
+                                                <label for="docpic">Choose a profile picture:</label>
+                                                <input type="file" id="docpic" class="form-control-file border" name="docpic">
+                                          </div>
                                         </div>
                                     </div>
                                 </form>
