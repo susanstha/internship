@@ -125,7 +125,7 @@
           <span>Lab Test</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="labtestDropdown">
-          <a class="dropdown-item" href="#">Lab Reports</a>
+          <a class="dropdown-item" href="hospitallabtest.php">Lab Reports</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Lab Reports</a>
         </div>
@@ -136,7 +136,7 @@
           <span>Medicine</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="medicineDropdown">
-          <a class="dropdown-item" href="#">Medicine List</a>
+          <a class="dropdown-item" href="hospitalmedicine.php">Medicine List</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Medicine</a>
         </div>
@@ -160,9 +160,9 @@
           <span>Beds</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="bedDropdown">
-          <a class="dropdown-item" href="#">Taken</a>
+          <a class="dropdown-item" href="hospitalbedlist.php">List of Bed</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Available</a>
+          <a class="dropdown-item" href="hospitalbedallotment.php">Bed Allotment</a>
         </div>
         </li>
     </ul>

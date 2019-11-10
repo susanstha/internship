@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="static/css/hospitaladmin.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Departments</title>
+    <title>Schedules</title>
 </head>
 <body>
           <!-- navbar -->
@@ -171,36 +171,46 @@
           <div class="container-fluid">
               <div class="row">
                   <div class="col-sm-8">
-                    <h3>List of Departments</h3>
+                    <h3>List of Beds</h3>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adddeptt">Add new</button>
-                      <div class="modal fade" id="adddeptt" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addbed">Add new</button>
+                      <div class="modal fade" id="addbed" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="deptModalLabel">Add Department</h5>
+                              <h5 class="modal-title" id="deptModalLabel">Add Bed</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
                             <div class="modal-body">
-                              <div>
-                                <form action="">
-                                  <div class="form-group">
-                                    <label for="departtname">Name</label>
-                                    <input type="text" id="departtname" name="dname" class="form-control">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="departtdesc">Description</label>
-                                      <textarea class="form-control" id="departtdesc" rows="3" rows="10"></textarea>
-                                  </div>
-                                </form>
-                              </div>
+                                <div>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="bedcat">Category</label>
+                                            <input type="text" id="bedcat" name="bedcat" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bednum">Bed Number</label>
+                                            <input type="number" id="bednum" name="bednum" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bedstatus">Department</label>
+                                            <select class="form-control" id="bedstatus" name="bedstatus">
+                                                <option>Available</option>
+                                                <option>Alloted</option>
+                                            </select>
+                                          </div>
+                                        <div class="form-group">
+                                            <label for="beddesc">Description</label>
+                                            <input type="text" id="beddesc" name="beddesc" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn btn-primary mr-auto">Submit</button>
                             </div>
                           </div>
                         </div>
@@ -209,11 +219,13 @@
                 </div>
               <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <table id="dept_list" class="display" style="width:100%">
+                      <table id="bed_list" class="display" style="width:100%">
                           <thead>
                               <tr>
-                                  <th>Dept ID</th>
-                                  <th>Name</th>
+                                  <th>S.N.</th>
+                                  <th>Category</th>
+                                  <th>Bed Number</th>
+                                  <th>Status</th>
                                   <th>Description</th>
                                   <th>Options</th>
                               </tr>
@@ -223,38 +235,50 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
+                                  <td>_____</td>
                                   <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Add Department</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <div>
-                                              <form action="">
-                                                <div class="form-group">
-                                                  <label for="departtname">Name</label>
-                                                  <input type="text" id="departtname" name="dname" class="form-control">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addbed">Edit</button>
+                                    <div class="modal fade" id="addbed" tabindex="-1" role="dialog" aria-labelledby="deptModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deptModalLabel">Add Bed</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="departtdesc">Description</label>
-                                                    <textarea class="form-control" id="departtdesc" rows="3" rows="10"></textarea>
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <form action="">
+                                                            <div class="form-group">
+                                                                <label for="bedcat">Category</label>
+                                                                <input type="text" id="bedcat" name="bedcat" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="bednum">Bed Number</label>
+                                                                <input type="number" id="bednum" name="bednum" class="form-control">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="bedstatus">Department</label>
+                                                                <select class="form-control" id="bedstatus" name="bedstatus">
+                                                                    <option>Available</option>
+                                                                    <option>Alloted</option>
+                                                                </select>
+                                                              </div>
+                                                            <div class="form-group">
+                                                                <label for="beddesc">Description</label>
+                                                                <input type="text" id="beddesc" name="beddesc" class="form-control">
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                              </form>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary mr-auto">Submit</button>
+                                                </div>
                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                          </div>
                                         </div>
-                                      </div>
-                                    </div>
+                                     </div>
                                     <button type="button" class="btn btn-danger">Delete </button>
                                   </td>
                               </tr>
@@ -262,91 +286,22 @@
                                   <td>____ __ __</td>
                                   <td>_____</td>
                                   <td>_____</td>
+                                  <td>____ __ __</td>
+                                  <td>_____</td>
                                   <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
+                                    <button type="button" class="btn btn-primary">Edit </button>  
                                     <button type="button" class="btn btn-secondary">Delete </button>
                                   </td>
-
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td>____ __ __</td>
-                                  <td>_____</td>
-                                  <td>_____</td>
-                                  <td>
-                                    <button type="button" class="btn btn-secondary">Edit</button>
-                                    <button type="button" class="btn btn-secondary">Delete</button>
-                                  </td>
-                              </tr>
+                              </tr>                             
                           </tbody>
                           <tfoot>
                               <tr>
-                                  <th>Dept ID</th>
-                                  <th>Name</th>
-                                  <th>Description</th>
-                                  <th>Options</th>
+                                <th>S.N.</th>
+                                <th>Category</th>
+                                <th>Bed Number</th>
+                                <th>Status</th>
+                                <th>Description</th>
+                                <th>Options</th>
                               </tr>
                           </tfoot>
                       </table>
@@ -367,7 +322,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
       $(document).ready(function() {
-    $('#dept_list').DataTable({     
+    $('#bed_list').DataTable({     
       "scrollY": "200px",
       "scrollCollapse": true,
       "paging": false,

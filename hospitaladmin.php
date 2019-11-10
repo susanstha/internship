@@ -124,7 +124,7 @@
           <span>Lab Test</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="labtestDropdown">
-          <a class="dropdown-item" href="#">Lab Reports</a>
+          <a class="dropdown-item" href="hospitallabtest.php">Lab Reports</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Lab Reports</a>
         </div>
@@ -135,7 +135,7 @@
           <span>Medicine</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="medicineDropdown">
-          <a class="dropdown-item" href="#">Medicine List</a>
+          <a class="dropdown-item" href="hospitalmedicine.php">Medicine List</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Add Medicine</a>
         </div>
@@ -159,9 +159,9 @@
           <span>Beds</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="bedDropdown">
-          <a class="dropdown-item" href="#">Taken</a>
+          <a class="dropdown-item" href="hospitalbedlist.php">List of Bed</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Available</a>
+          <a class="dropdown-item" href="hospitalbedallotment.php">Bed Allotment</a>
         </div>
         </li>
     </ul>
@@ -259,7 +259,7 @@
               </div>
               <div class="mr-5"><h2>Medicines</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="hospitalmedicine.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -291,7 +291,7 @@
               </div>
               <div class="mr-5"><h2>Beds</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="hospitalbedlist.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
