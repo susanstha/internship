@@ -1,3 +1,8 @@
+.navbar-brand{
+  font-family: 'Satisfy', 'cursive';
+  font-size: 30px;
+}
+
 #wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,6 +36,7 @@
 .sidebar .nav-item .nav-link span {
   font-size: 0.65rem;
   display: block;
+  color: whitesmoke;
 }
 
 .sidebar .nav-item .dropdown-menu {
@@ -62,6 +68,15 @@
   width: 0 !important;
   overflow: hidden;
 }
+
+.navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item{
+  color: whitesmoke;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+  background-color: black;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     width: 225px !important;
@@ -76,6 +91,7 @@
   .sidebar .nav-item .nav-link span {
     font-size: 1rem;
     display: inline;
+    color: whitesmoke;
   }
   .sidebar .nav-item .dropdown-menu {
     position: static !important;

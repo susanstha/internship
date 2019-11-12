@@ -15,8 +15,8 @@
           <!-- navbar -->
   <div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark static-top">
-      <a class="navbar-brand" href="#">
-              Logo
+      <a class="navbar-brand logo" href="#">
+              HMS
       </a>
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -25,25 +25,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto test">
-          <li class="nav-item active imp">
-            <a class="nav-link" href="#aboutme">Home</a>
-          </li>
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline" action="#">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
           &nbsp;
           &nbsp;
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">About Us</a>
-          </li>
-          &nbsp;
-          &nbsp;
-          <li class="nav-item">
-            <a class="nav-link" href="#hireme">Contact</a>
-          </li> 
-          &nbsp;
-          &nbsp;
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary" href="#">Logout</a>
-          </li>  
+          <li class="nav-item dropdown">
+            <a class="nav-link btn btn-primary dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+               Mr. Admin
+            </a>
+            <div class="dropdown-menu bg-dark">
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+            </li> 
         </ul>
       </div>  
     </nav>
@@ -51,13 +49,13 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="hospitaladmin.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="hospitaldept.php">
           <i class="fas fa-sitemap"></i>
           <span>Departments</span>
@@ -176,7 +174,7 @@
               </div>
               <div class="mr-5"><h2>Doctors</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldoclist.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitaldoclist.php">
               <span class="float-left"><h4>8</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -192,7 +190,7 @@
               </div>
               <div class="mr-5"><h2>Patients</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalpatientlist.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitalpatientlist.php">
               <span class="float-left"><h4>24</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -208,7 +206,7 @@
               </div>
               <div class="mr-5"><h2>Appointment</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalappoint.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitalappoint.php">
               <span class="float-left"><h4>6</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -224,7 +222,7 @@
               </div>
               <div class="mr-5"><h2>Departments</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldept.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitaldept.php">
               <span class="float-left"><h4>4</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -243,7 +241,7 @@
               </div>
               <div class="mr-5"><h2>Schedules</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalsch.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitalsch.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -259,7 +257,7 @@
               </div>
               <div class="mr-5"><h2>Medicines</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalmedicine.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitalmedicine.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -275,7 +273,7 @@
               </div>
               <div class="mr-5"><h2>Donors</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitaldonor.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitaldonor.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -291,7 +289,7 @@
               </div>
               <div class="mr-5"><h2>Beds</h2></div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="hospitalbedlist.php">
+            <a class="card-footer bg-dark text-white clearfix small z-1 stretched-link" href="hospitalbedlist.php">
               <span class="float-left"><h4>View Details</h4></span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -303,16 +301,16 @@
 
       <div class="row" style=" margin-top: 50px;">
         <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-success button">Add Patients</button>
+          <button type="button" class="btn btn-outline-light btn-success btn-block btn-lg">Add Patients</button>
         </div>
         <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-danger button">Add Donor</button>
+          <button type="button" class="btn btn-outline-light btn-danger btn-block btn-lg">Add Donor</button>
         </div>
         <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-warning button">Add Doctor</button>
+          <button type="button" class="btn btn-outline-light btn-warning btn-block btn-lg">Add Doctor</button>
         </div>
         <div class="col-xl-3 col-sm-6 text-center">
-          <button type="button" class="btn btn-outline-light btn-dark button">Add Appointment</button>
+          <button type="button" class="btn btn-outline-light btn-secondary btn-block btn-lg">Add Appointment</button>
         </div>
 
       </div>
@@ -331,6 +329,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
     <script>
+        $(document).ready(function() {
+        // executes when HTML-Document is loaded and DOM is ready
+        console.log("document is ready");
+          
+
+          $( ".card" ).hover(
+          function() {
+            $(this).addClass('shadow').css('cursor', 'pointer'); 
+          }, function() {
+            $(this).removeClass('shadow');
+          }
+        );
+            
+        });
         (function($) {
             "use strict"; // Start of use strict
 
