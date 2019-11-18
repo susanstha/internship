@@ -40,25 +40,25 @@
                 }
             }
 
-            // if (empty($_POST["password"])) {
-            //     $passwordErr = "Password is required";
-            // } 
-            // else {
-            //     $email = test_input($_POST["password"]);
-            //     // check if password is well-formed
-            //     if (strlen($_POST["password"]) <= '8') {
-            //         $passwordErr = "Your Password Must Contain At Least 8 Characters!";
-            //     }
-            //     elseif(!preg_match("#[0-9]+#",$password)) {
-            //         $passwordErr = "Your Password Must Contain At Least 1 Number!";
-            //     }
-            //     elseif(!preg_match("#[A-Z]+#",$password)) {
-            //         $passwordErr = "Your Password Must Contain At Least 1 Capital Letter!";
-            //     }
-            //     elseif(!preg_match("#[a-z]+#",$password)) {
-            //         $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
-            //     }
-            // }
+            if (empty($_POST["password"])) {
+                $passwordErr = "Password is required";
+            }
+            else {
+                $password = $_POST["password"];
+                // check if password is well-formed
+                if (strlen($_POST["password"]) <= '8') {
+                    $passwordErr = "Your Password Must Contain At Least 8 Characters!";
+                }
+                elseif(!preg_match("#[0-9]+#",$password)) {
+                    $passwordErr = "Your Password Must Contain At Least 1 Number!";
+                }
+                elseif(!preg_match("#[A-Z]+#",$password)) {
+                    $passwordErr = "Your Password Must Contain At Least 1 Capital Letter!";
+                }
+                elseif(!preg_match("#[a-z]+#",$password)) {
+                    $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
+                }
+            }
         }
         function test_input($data) {
             $data = trim($data);
@@ -81,11 +81,11 @@
                         <input type="email" id="email" class="form-control-file border" name="email" value="<?php echo $email;?>">
                         <span class="error">* <?php echo $emailErr;?></span>
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" class="form-control-file border" name="password" value="<?php echo $password;?>">
                         <span class="error">* <?php echo $passwordErr;?></span>
-                    </div> -->
+                    </div>
                     <button type="submit" value="Submit" name="submit" class="btn btn-primary btn-outline-light">Submit</button>        
                 </form>
             </div>
@@ -97,8 +97,8 @@
                     echo $name;
                     echo "<br>";
                     echo $email;
-                    // echo "<br>";
-                    // echo $password;
+                    echo "<br>";
+                    echo $password;
                 ?>
             </div>
         </div>
