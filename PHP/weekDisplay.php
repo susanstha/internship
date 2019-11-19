@@ -26,39 +26,46 @@
             </form>
         </div>
    </div>
+
+   <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <?php
+                $number = "";
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $number = $_POST["number"];
+                    
+                    switch ($number) {
+                        case "1":
+                            echo "<h1>It is SUNDAY</h1>";
+                            break;
+                        case "2":
+                            echo "<h1>It is MONDAY</h1>";
+                            break;
+                        case "3":
+                            echo "<h1>It is TUESDAY</h1>";
+                            break;
+                        case "4":
+                            echo "<h1>It is WEDNESDAY</h1>";
+                            break;
+                        case "5":
+                            echo "<h1>It is THURSDAY</h1>";
+                            break;
+                        case "6":
+                            echo "<h1>It is FRIDAY</h1>";
+                            break;
+                        case "7":
+                            echo "<h1>It is SATURDAY</h1>";
+                            break;
+                        default:
+                            echo "<h1>It is awesome day</h1>";
+                    }
+                }
+            ?>
+
+        </div>
+    </div>
    
-   <?php
-        $number = "";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $number = $_POST["number"];
-            
-            switch ($number) {
-                case "1":
-                    echo "<h1>It is SUNDAY</h1>";
-                    break;
-                case "2":
-                    echo "<h1>It is MONDAY</h1>";
-                    break;
-                case "3":
-                    echo "<h1>It is TUESDAY</h1>";
-                    break;
-                case "4":
-                    echo "<h1>It is WEDNESDAY</h1>";
-                    break;
-                case "5":
-                    echo "<h1>It is THURSAY</h1>";
-                    break;
-                case "6":
-                    echo "<h1>It is FRIDAY</h1>";
-                    break;
-                case "7":
-                    echo "<h1>It is SATURDAY</h1>";
-                    break;
-                default:
-                    echo "<h1>It is awesome day</h1>";
-            }
-        }
-?>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
