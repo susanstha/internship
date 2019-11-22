@@ -14,58 +14,58 @@
     </head>
     <body>  
         <?php
-        $nameErr = $emailErr = $passwordErr =  "";
-        $name = $email = $password = "";
+            $nameErr = $emailErr = $passwordErr =  "";
+            $name = $email = $password = "";
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (empty($_POST["name"])) {
-                $nameErr = "Name is required";
-            } 
-            else {
-                $name = test_input($_POST["name"]);
-                // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                $nameErr = "Only letters and white space allowed";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_POST["name"])) {
+                    $nameErr = "Name is required";
+                } 
+                else {
+                    $name = test_input($_POST["name"]);
+                    // check if name only contains letters and whitespace
+                    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                    $nameErr = "Only letters and white space allowed";
+                    }
                 }
-            }
-            
-            if (empty($_POST["email"])) {
-                $emailErr = "Email is required";
-            } 
-            else {
-                $email = test_input($_POST["email"]);
-                // check if e-mail address is well-formed
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format";
+                
+                if (empty($_POST["email"])) {
+                    $emailErr = "Email is required";
+                } 
+                else {
+                    $email = test_input($_POST["email"]);
+                    // check if e-mail address is well-formed
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = "Invalid email format";
+                    }
                 }
-            }
 
-            if (empty($_POST["password"])) {
-                $passwordErr = "Password is required";
+                if (empty($_POST["password"])) {
+                    $passwordErr = "Password is required";
+                }
+                else {
+                    $password = $_POST["password"];
+                    // check if password is well-formed
+                    if (strlen($_POST["password"]) <= '8') {
+                        $passwordErr = "Your Password Must Contain At Least 8 Characters!";
+                    }
+                    elseif(!preg_match("#[0-9]+#",$password)) {
+                        $passwordErr = "Your Password Must Contain At Least 1 Number!";
+                    }
+                    elseif(!preg_match("#[A-Z]+#",$password)) {
+                        $passwordErr = "Your Password Must Contain At Least 1 Capital Letter!";
+                    }
+                    elseif(!preg_match("#[a-z]+#",$password)) {
+                        $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
+                    }
+                }
             }
-            else {
-                $password = $_POST["password"];
-                // check if password is well-formed
-                if (strlen($_POST["password"]) <= '8') {
-                    $passwordErr = "Your Password Must Contain At Least 8 Characters!";
-                }
-                elseif(!preg_match("#[0-9]+#",$password)) {
-                    $passwordErr = "Your Password Must Contain At Least 1 Number!";
-                }
-                elseif(!preg_match("#[A-Z]+#",$password)) {
-                    $passwordErr = "Your Password Must Contain At Least 1 Capital Letter!";
-                }
-                elseif(!preg_match("#[a-z]+#",$password)) {
-                    $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
-                }
+            function test_input($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
             }
-        }
-        function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
         ?>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
